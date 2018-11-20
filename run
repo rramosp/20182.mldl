@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./utils/runepy utils/rlxmooc.epy $*
