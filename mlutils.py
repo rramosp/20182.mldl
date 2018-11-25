@@ -50,6 +50,19 @@ def plot_2Ddata_with_boundary(predict, X, y, line_width=3, line_alpha=1, line_co
     return p0, p1
 
 
+def twospirals(n_points, noise=.5):
+    """
+     Returns the two spirals dataset.
+    """
+    n = np.sqrt(np.random.rand(n_points,1)) * 780 * (2*np.pi)/360
+    d1x = -np.cos(n)*n + np.random.rand(n_points,1) * noise
+    d1y = np.sin(n)*n + np.random.rand(n_points,1) * noise
+    X,y = (np.vstack((np.hstack((d1x,d1y)),np.hstack((-d1x,-d1y)))), 
+            np.hstack((np.zeros(n_points),np.ones(n_points))))
+    
+    from sklearn.preprocessing import MinMaxScaler
+    X = MinMaxScaler().fit_transform(X)
+    return X,y
 
 def plot_2Ddata(X, y, dots_alpha=.5, noticks=False):
     colors = cm.hsv(np.linspace(0, .7, len(np.unique(y))))
@@ -479,3 +492,134 @@ def plot_hists(train_hist, test_hist):
     plt.plot(test_hist[:,1])
     plt.title("test accuracy")
     plt.grid();
+
+    
+def draw_neural_net(ax, left, right, bottom, top, layer_sizes):
+    '''
+    Draw a neural network cartoon using matplotilb.
+    
+    :usage:
+        >>> fig = plt.figure(figsize=(12, 12))
+        >>> draw_neural_net(fig.gca(), .1, .9, .1, .9, [4, 7, 2])
+    
+    :parameters:
+        - ax : matplotlib.axes.AxesSubplot
+            The axes on which to plot the cartoon (get e.g. by plt.gca())
+        - left : float
+            The center of the leftmost node(s) will be placed here
+        - right : float
+            The center of the rightmost node(s) will be placed here
+        - bottom : float
+            The center of the bottommost node(s) will be placed here
+        - top : float
+            The center of the topmost node(s) will be placed here
+        - layer_sizes : list of int
+            List of layer sizes, including input and output dimensionality
+    '''
+    n_layers = len(layer_sizes)
+    v_spacing = (top - bottom)/float(max(layer_sizes))
+    h_spacing = (right - left)/float(len(layer_sizes) - 1)
+    # Nodes
+    for n, layer_size in enumerate(layer_sizes):
+        layer_top = v_spacing*(layer_size)/2. + (top + bottom)/2.
+        for m in xrange(layer_size+(1 if n<layer_size else 0) ):
+            color = "red" if n==0 else "blue" if n==len(layer_sizes)-1 else "gray"
+            ec = "black"
+            alpha = 1.
+            if m==layer_size:
+                ec = "gray"
+                color = "white"
+            circle = plt.Circle((n*h_spacing + left, layer_top - m*v_spacing), v_spacing/4.,
+                                color=color, ec=ec, zorder=4, alpha=alpha)
+            ax.add_artist(circle)
+            if m==layer_size:
+                text = plt.Text(n*h_spacing + left - .015, layer_top - m*v_spacing - .015, "1", zorder=5)
+                ax.add_artist(text)
+    # Edges
+    for n, (layer_size_a, layer_size_b) in enumerate(zip(layer_sizes[:-1], layer_sizes[1:])):
+        layer_top_a = v_spacing*(layer_size_a)/2. + (top + bottom)/2.
+        layer_top_b = v_spacing*(layer_size_b)/2. + (top + bottom)/2.
+        for m in xrange(layer_size_a+1):
+            for o in xrange(layer_size_b):
+                color = "gray" if m==layer_size_a else "black"
+                line = plt.Line2D([n*h_spacing + left, (n + 1)*h_spacing + left],
+                                  [layer_top_a - m*v_spacing, layer_top_b - o*v_spacing], c=color, alpha=.5)
+                ax.add_artist(line)
+                
+                
+def display_imgs(w, figsize=(6,6)):
+    plt.figure(figsize=figsize)
+    w = (w-np.min(w))/(np.max(w)-np.min(w))
+    for i in range(w.shape[-1]):
+        plt.subplot(10,10,i+1)
+        plt.imshow(w[:,:,:,i], interpolation="none")
+        plt.axis("off")
+        
+def show_labeled_image_mosaic(imgs, labels, figsize=(12, 12), idxs=None):
+
+    plt.figure(figsize=figsize)
+    for labi,lab in [i for i in enumerate(np.unique(labels))]:
+        k = imgs[labels == lab]
+        _idxs = idxs[:10] if idxs is not None else np.random.permutation(len(k))[:10]
+        for i, idx in enumerate(_idxs):
+            if i == 0:
+                plt.subplot(10, 11, labi*11+1)
+                plt.title("LABEL %d" % lab)
+                plt.plot(0, 0)
+                plt.axis("off")
+
+            img = k[idx]
+            plt.subplot(10, 11, labi*11+i+2)
+            plt.imshow(img, cmap=plt.cm.Greys_r)
+            plt.axis("off")
+            
+            
+def show_preds(x, y, preds):
+    for i in range(len(x)):
+        plt.figure(figsize=(5,2.5))
+        plt.subplot(122)
+        plt.imshow(x[i])
+        plt.axis("off")
+        plt.subplot(121)
+        plt.bar(np.arange(len(preds[i])), preds[i], color="blue", alpha=.5, label="prediction")
+        plt.bar(np.arange(len(preds[i])), np.eye(len(preds[i]))[int(y[i])], color="red", alpha=.5, label="label")
+        plt.xticks(range(len(preds[i])), range(len(preds[i])), rotation="vertical");
+        plt.xlim(-.5,len(preds[i])-.5);
+        plt.legend(loc='upper center', bbox_to_anchor=(0.5, +1.35),ncol=5)
+
+        
+from tensorflow.keras import backend as K
+def get_activations(model, model_inputs, layer_name=None):
+    activations = []
+    inp = model.input
+
+    model_multi_inputs_cond = True
+    if not isinstance(inp, list):
+        # only one input! let's wrap it in a list.
+        inp = [inp]
+        model_multi_inputs_cond = False
+
+    outputs = [layer.output for layer in model.layers if
+               layer.name == layer_name or layer_name is None]  # all layer outputs
+
+    # we remove the placeholders (Inputs node in Keras). Not the most elegant though..
+    outputs = [output for output in outputs if 'input_' not in output.name]
+
+    funcs = [K.function(inp + [K.learning_phase()], [out]) for out in outputs]  # evaluation functions
+
+    if model_multi_inputs_cond:
+        list_inputs = []
+        list_inputs.extend(model_inputs)
+        list_inputs.append(0.)
+    else:
+        list_inputs = [model_inputs, 0.]
+
+    # Learning phase. 0 = Test mode (no dropout or batch normalization)
+    # layer_outputs = [func([model_inputs, 0.])[0] for func in funcs]
+    activations = [func(list_inputs)[0] for func in funcs]
+    layer_names = [output.name for output in outputs]
+
+    result = dict(zip(layer_names, activations))
+    return result
+
+
