@@ -33,6 +33,21 @@
 </table> 
 
 
+
+### Sesión 3: Aprendizaje no supervisado. Reudcción de la dimensionalidad. Aprendiendo representaciones<table>
+  <tr>
+    <td>
+      Parte 1<br/>
+<a href="https://www.youtube.com/watch?v=xfId011RJBw&index=6&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY"><img src="https://img.youtube.com/vi/xfId011RJBw/2.jpg"/></a>
+    </td>
+    <td>
+      Parte 2<br/>
+<a href="https://www.youtube.com/watch?v=VXYddq96BLM&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=5"><img src="https://img.youtube.com/vi/VXYddq96BLM/1.jpg"/></a>
+    </td>
+  </tr>
+</table> 
+
+
 --
 
 
