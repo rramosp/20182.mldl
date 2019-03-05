@@ -75,6 +75,15 @@
   </tr>
 </table> 
 
+### Sesión 6: Analtica de series temporales. Redes Recurrentes<table>
+  <tr>
+    <td>
+      Parte 1<br/>
+<a href="https://www.youtube.com/watch?v=5C56X4vvhi8&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=11"><img src="https://img.youtube.com/vi/5C56X4vvhi8/2.jpg"/></a>
+    </td>
+  </tr>
+</table> 
+
 
 
 --
