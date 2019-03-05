@@ -27,7 +27,7 @@
     </td>
     <td>
       Parte 2<br/>
-<a href="https://www.youtube.com/watch?v=VXYddq96BLM&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=5"><img src="https://img.youtube.com/vi/VXYddq96BLM/0.jpg"/></a>
+<a href="https://www.youtube.com/watch?v=VXYddq96BLM&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=5"><img src="https://img.youtube.com/vi/VXYddq96BLM/1.jpg"/></a>
     </td>
   </tr>
 </table> 
