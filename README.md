@@ -1,5 +1,8 @@
 # An Overview of Machine Learning and Deep Learning Techniques
 
+## [Materiales, Notebooks, Talleres y Soluciones](contents)
+
+## Videos
 
 ### Sesión 1: Modelos derivados de los datos. Intro a Python/Numpy/Pandas
 <table>
@@ -20,11 +23,11 @@
   <tr>
     <td>
       Parte 1<br/>
-<a href="https://www.youtube.com/watch?v=8S-JlyrMxxE&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=4"><img src="https://img.youtube.com/vi/8S-JlyrMxxE/1.jpg"/></a>
+<a href="https://www.youtube.com/watch?v=8S-JlyrMxxE&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=4"><img src="https://img.youtube.com/vi/8S-JlyrMxxE/2.jpg"/></a>
     </td>
     <td>
       Parte 2<br/>
-<a href="https://www.youtube.com/watch?v=VXYddq96BLM&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=5"><img src="https://img.youtube.com/vi/VXYddq96BLM/3.jpg"/></a>
+<a href="https://www.youtube.com/watch?v=VXYddq96BLM&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=5"><img src="https://img.youtube.com/vi/VXYddq96BLM/0.jpg"/></a>
     </td>
   </tr>
 </table> 
