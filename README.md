@@ -27,7 +27,7 @@
     </td>
     <td>
       Parte 2<br/>
-<a href="https://www.youtube.com/watch?v=VXYddq96BLM&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=5"><img src="https://img.youtube.com/vi/VXYddq96BLM/1.jpg"/></a>
+<a href="https://www.youtube.com/watch?v=kuxm71m5WYw&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=3"><img src="https://img.youtube.com/vi/kuxm71m5WYw/1.jpg"/></a>
     </td>
   </tr>
 </table> 
@@ -46,6 +46,21 @@
     </td>
   </tr>
 </table> 
+
+
+### Sesión 4: Introducción a las redes neuronales y a TensorFlow<table>
+  <tr>
+    <td>
+      Parte 1<br/>
+<a href="https://www.youtube.com/watch?v=M5YLLT29QEs&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=7"><img src="https://img.youtube.com/vi/M5YLLT29QEs/2.jpg"/></a>
+    </td>
+    <td>
+      Parte 2<br/>
+<a href="https://www.youtube.com/watch?v=hBRfjUJUT5I&index=8&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY"><img src="https://img.youtube.com/vi/hBRfjUJUT5I/2.jpg"/></a>
+    </td>
+  </tr>
+</table> 
+
 
 
 --
