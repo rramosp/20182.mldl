@@ -62,6 +62,20 @@
 </table> 
 
 
+### Sesión 5: Analtica de imágenes con redes convolucionales. Transfer Learning<table>
+  <tr>
+    <td>
+      Parte 1<br/>
+<a href="https://www.youtube.com/watch?v=toQuAtRRBeg&index=10&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY"><img src="https://img.youtube.com/vi/toQuAtRRBeg/3.jpg"/></a>
+    </td>
+    <td>
+      Parte 2<br/>
+<a href="https://www.youtube.com/watch?v=DayRXQq0X9o&list=PLZ0UFciczQg6LxMjbbKRzUm6eX2C_h8PY&index=9"><img src="https://img.youtube.com/vi/DayRXQq0X9o/3.jpg"/></a>
+    </td>
+  </tr>
+</table> 
+
+
 
 --
 
