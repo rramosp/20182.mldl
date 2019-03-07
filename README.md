@@ -49,8 +49,7 @@
   </tr>
 </table> 
 
-### Sesión 4
-#### Introducción a las redes neuronales y a TensorFlow
+#### Sesión 4: Introducción a las redes neuronales y a TensorFlow
 <table>
   <tr>
     <td>
