@@ -4,8 +4,7 @@
 
 ## Videos
 
-### Sesión 1
-#### Modelos derivados de los datos. Intro a Python/Numpy/Pandas
+#### Sesión 1: Modelos derivados de los datos. Intro a Python/Numpy/Pandas
 
 <table>
   <tr>
@@ -20,8 +19,7 @@
   </tr>
 </table> 
 
-### Sesión 2
-#### Diseño de algoritmos ML. Aprendizaje supervisado. Métodos de ensemble. Flujo de trabajo ML
+#### Sesión 2: Diseño de algoritmos ML. Aprendizaje supervisado. Métodos de ensemble. Flujo de trabajo ML
 <table>
   <tr>
     <td>
@@ -37,8 +35,7 @@
 
 
 
-### Sesión 3
-#### Aprendizaje no supervisado. Reudcción de la dimensionalidad. Aprendiendo representaciones
+#### Sesión 4: Aprendizaje no supervisado. Reudcción de la dimensionalidad. Aprendiendo representaciones
 <table>
   <tr>
     <td>
@@ -68,8 +65,7 @@
 </table> 
 
 
-### Sesión 5
-#### Analtica de imágenes con redes convolucionales. Transfer Learning
+#### Sesión 5: Analtica de imágenes con redes convolucionales. Transfer Learning
 <table>
   <tr>
     <td>
@@ -83,8 +79,7 @@
   </tr>
 </table> 
 
-### Sesión 6
-#### Analtica de series temporales. Redes Recurrentes
+#### Sesión 6: Analtica de series temporales. Redes Recurrentes
 <table>
   <tr>
     <td>
