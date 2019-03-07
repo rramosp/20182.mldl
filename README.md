@@ -34,7 +34,7 @@
 
 
 
-### Sesión 3: Aprendizaje no supervisado. Reudcción de la dimensionalidad. Aprendiendo representaciones<table>
+### Sesión 3: Aprendizaje no supervisado. Reudcción de la dimensionalidad. Aprendiendo representaciones
 <table>
   <tr>
     <td>
@@ -48,8 +48,7 @@
   </tr>
 </table> 
 
-
-### Sesión 4: Introducción a las redes neuronales y a TensorFlow<table>
+### Sesión 4: Introducción a las redes neuronales y a TensorFlow
 <table>
   <tr>
     <td>
@@ -64,7 +63,7 @@
 </table> 
 
 
-### Sesión 5: Analtica de imágenes con redes convolucionales. Transfer Learning<table>
+### Sesión 5: Analtica de imágenes con redes convolucionales. Transfer Learning
 <table>
   <tr>
     <td>
@@ -78,7 +77,7 @@
   </tr>
 </table> 
 
-### Sesión 6: Analtica de series temporales. Redes Recurrentes<table>
+### Sesión 6: Analtica de series temporales. Redes Recurrentes
 <table>
   <tr>
     <td>
