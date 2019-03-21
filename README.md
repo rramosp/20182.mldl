@@ -35,7 +35,7 @@
 
 
 
-#### Sesión 4: Aprendizaje no supervisado. Reudcción de la dimensionalidad. Aprendiendo representaciones
+#### Sesión 4: Aprendizaje no supervisado. Reducción de la dimensionalidad. Aprendiendo representaciones
 <table>
   <tr>
     <td>
